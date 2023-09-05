@@ -1,0 +1,109 @@
+Java Collection - it os an object that represent group of object
+                - Unified architecture for represent and manipulating collection
+                - collections help in storing, organizing, and manipulating data in a structured and efficient manner.
+                - provides a set of interfaces (such as List, Set, Map, etc.) and classes (such as ArrayList, HashSet, HashMap, etc.)
+                - allow you to work with different types of data structures and data storage needs
+                - The collections framework simplifies the process of handling groups of elements and provides a consistent API for performing common operations like adding, removing, searching, sorting, and more.
+
+Advantage :-
+1) Reduce Programming effort
+2) Increase performance
+3) Provides introperability b/w unrelated API
+4) Reusable
+
+Collection Interfaces : it is divided into two groups
+1) java.util.collection
+2) java.util.map(not true collection)
+
+tin interface hote hai
+1. list Interface
+   1.1 ArrayList class
+   1.2 LinkedList class
+   1.3 Vector class
+   1.4 stack class
+
+2. Queue Interface
+3. Set Interrface
+
+1 ) list interface extentds the collection interface
+     it is used to store ordered collection of data it may contain duplicate data
+     order means : the order in which the element are being inserted by thier position in the list using
+     zero-based indexing .
+
+1.1 ) ArrayList :- resizable - array implementation of the list interface
+      Constructor and description :
+      ArrayList() :
+            construct an empty list with an initial capacity of ten
+      ArrayList(Collection <? extends E>C) :
+            construct a list containing the element of the specified collection return by the collection iterator.
+      ArrayList(int initialcapacity)
+            constructs an empty list with the specified initial capacity
+
+1.2 ) LinkedList :- Doubly_linked_list
+                    it will traverse from the beginning and the end
+      Constructor and description :
+             LinkedList() :
+                   construct an empty list
+             LinkedList(Collection <? extends E>C) :
+                   construct a list containing the element of the specified collection return by the collection iterator.
+             ArrayList(int initialcapacity)
+                   constructs an empty list with the specified initial capacity
+
+1.3 ) Vector :- synchronized dynamic array that provides thread safety
+        Constructor and description :
+            Vector():
+                Description: Creates an empty vector with an initial capacity of 10
+            Vector(int initialCapacity):
+                Description: Creates an empty vector with the specified initial capacity.
+                Example: Vector<String> names = new Vector<>(20);
+            Vector(int initialCapacity, int capacityIncrement):
+                Description: Creates an empty vector with the specified initial capacity and capacity increment. The capacity increment determines how much the vector's capacity should grow when it needs to accommodate more elements.
+                Example: Vector<Integer> numbers = new Vector<>(50, 10);
+            Vector(Collection<? extends E> c):
+                Description: Creates a vector containing the elements of the specified collection c, in the order they are returned by the collection's iterator.
+                Example: List<String> namesList = new ArrayList<>(); Vector<String> names = new Vector<>(namesList);
+1.4 ) Stack :- Represent last in first out stack of object
+        Constructor and Description
+        stack():
+            create an empty stack
+
+
+Queue Interface : follows First-in-first-out[FIFO] Principle
+
+The queue interface typically defines two operations :
+
+Enqueue: This operation adds an element to the rear or end of the queue.
+        In other words, it inserts an element at the tail of the queue.
+
+Dequeue: This operation removes and returns the element from the front or head of the queue.
+        It retrieves and processes the element that has been in the queue the longest.
+
+1 ) Priority Queue Class :- A priority queue class is a software component or data structure
+        that encapsulates the functionality of a priority queue. In object-oriented programming,
+        a class defines the blueprint for creating objects,
+        and a priority queue class would define the behavior and
+        operations associated with managing elements based on their priorities.
+        Constructor and description :
+                     PriorityQueue() :
+                           construct an empty queue with the defoult initail capacity 11 that order it's
+                           element according to their natural ordering
+                     PriorityQueue(Collection <? extends E>C) :
+                           construct a list containing the element of the specified collection return by the collection iterator.
+                     PriorityQueue(Comparator <? Super E> comparator)
+                            Creates a priority queue with the default initial capacity and whose element are ordered
+                            according to the specified comparator.
+
+2 ) ArrayDequeue :- provides a dynamic array-like implementation of a double-ended queue (deque).
+A deque is a linear data structure that allows elements to be added and removed from both ends,
+the front and the rear, providing efficient insertion and removal operations from both sides.
+ Constructor and description :
+               ArrayDeque() : Construct an empty array deque with an initail capacity sufficiant
+                                to hold 16 element
+               ArrayDeque(Collection <? extends E>c)
+                                Constructor a deque element of the specified collection in the order
+                                they are returned by the collection iterototor
+               ArrayDeque(int numelement) :
+                                Construct an empty array deque with an initial capacity suffieciant
+                                to hold the specified number of elements.
+
+
