@@ -3,7 +3,9 @@ Java Collection - it os an object that represent group of object
                 - collections help in storing, organizing, and manipulating data in a structured and efficient manner.
                 - provides a set of interfaces (such as List, Set, Map, etc.) and classes (such as ArrayList, HashSet, HashMap, etc.)
                 - allow you to work with different types of data structures and data storage needs
-                - The collections framework simplifies the process of handling groups of elements and provides a consistent API for performing common operations like adding, removing, searching, sorting, and more.
+                - The collections framework simplifies the process of handling groups of elements and provides a
+
+                consistent API for performing common operations like adding, removing, searching, sorting, and more.
 
 Advantage :-
 1) Reduce Programming effort
@@ -57,7 +59,8 @@ tin interface hote hai
                 Description: Creates an empty vector with the specified initial capacity.
                 Example: Vector<String> names = new Vector<>(20);
             Vector(int initialCapacity, int capacityIncrement):
-                Description: Creates an empty vector with the specified initial capacity and capacity increment. The capacity increment determines how much the vector's capacity should grow when it needs to accommodate more elements.
+                Description: Creates an empty vector with the specified initial capacity and capacity increment.
+                The capacity increment determines how much the vector's capacity should grow when it needs to accommodate more elements.
                 Example: Vector<Integer> numbers = new Vector<>(50, 10);
             Vector(Collection<? extends E> c):
                 Description: Creates a vector containing the elements of the specified collection c, in the order they are returned by the collection's iterator.
@@ -107,3 +110,54 @@ the front and the rear, providing efficient insertion and removal operations fro
                                 to hold the specified number of elements.
 
 
+Set Interface : A collection that contain no duplicate element
+                represents a collection of unique elements,
+                No Specific Order,
+                No Indexed Access
+                no contain pair
+
+3.1 ) HashSet :- is commonly used for storing and managing a set of unique elements efficiently
+Constructor and description :
+               HashSet() : Construct an empty  set
+                            the blanking hasmap instance has defoult initail capacity(16) and load factor(0.75)
+               HashSet(Collection <? extends E>c)
+                                Constructor a new set containing the element of the specified collection in the order
+                                they are returned by the collection iterototor
+               HashSet(int initialCapacity) :
+                                Construct a new empty set  with an initial capacity and default load factor(0.75)
+               HashSet(int initialCapacity, float loadfactor):
+                            Construct a new , empty set , the blanking HashMap instance has the
+                            specified initial capacity and the specified load factor
+
+
+
+3.2 ) LinkedHashSet :-  is that it maintains the insertion order of elements,
+                    meaning the order in which elements were added to the set is preserved.
+                    This characteristic makes LinkedHashSet suitable
+                    when you need to maintain a specific order of elements while ensuring uniqueness.
+
+Constructor and description :
+           LinkedHashSet() : Construct an empty  set
+                              the blanking hasmap instance has defoult initail capacity(16) and load factor(0.75)
+           LinkedHashSet(Collection <? extends E>c)
+                                  Constructor a new set containing the element of the specified collection in the order
+                                  they are returned by the collection iterototor
+           LinkedHashSet(int initialCapacity) :
+                                  Construct a new empty set  with an initial capacity and default load factor(0.75)
+           LinkedHashSet(int initialCapacity, float loadfactor):
+                              Construct a new , empty set , the blanking HashMap instance has the
+                              specified initial capacity and the specified load factor
+
+3.3 ) TreeSet :-maintains its elements in sorted order based on the natural ordering (if the elements are comparable)
+            or a custom comparator that you can provide.
+Constructor and description :
+           TreeSet() : Construct an empty  set
+                              Sorted according to natural ordering of its element
+           TreeSet(Collection <? extends E>c)
+                                  Constructor a new set containing the element of the specified collection in the order
+                                  they are returned by the collection iterototor,
+                                  Sorted according to natural ordering of its element
+           TreeSet(Comparator <? Super E> Comparator) :
+                                  Construct a new empty set , Sorted according to natural ordering of its element
+           TreeSet(int initialCapacity, float loadfactor):
+                              Construct a new , empty set , Sorted according to specified Comparator
